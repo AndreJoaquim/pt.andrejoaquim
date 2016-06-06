@@ -21,6 +21,22 @@ $(document).ready(function () {
 	on_mouseover("li");
     on_mouseout ("li");
 	
+	$("#home-link").click(function() {
+        
+        if( $(document).scrollLeft() != $("#home").offset().left ){
+            $('html, body').animate({
+                scrollLeft: $("#home").offset().left
+            }, 1500);
+        }
+        
+        $("#menu-list li").each(function (){
+            $(this).removeClass("active");
+        });
+        
+        $("#home-link").addClass("active");
+        
+    });
+	
     $("#about-me-link").click(function() {
         
         if( $(document).scrollLeft() != $("#about-me").offset().left ){

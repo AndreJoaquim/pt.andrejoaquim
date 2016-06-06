@@ -32,7 +32,7 @@ h1 {
     min-height: 75%;
     height: auto !important;
     height: 75%;
-    width: 300%;
+    width: 400%;
 }
 
 /* Single page container */
@@ -43,7 +43,7 @@ h1 {
     height: 75%;
     margin: 0 auto -80px;
     overflow: auto;
-    width: 33%;
+    width: 25%;
     float: left;
 }
 
@@ -54,10 +54,6 @@ h1 {
 
 .text-code {
     font-family: "Lucida Console", Monaco, monospace;
-}
-
-#photo {
-    height: 300px;
 }
 
 .no-style {
