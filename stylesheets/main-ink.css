@@ -1,0 +1,85 @@
+/*
+ * ANDRE JOAQUIM
+ * 2014
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
+
+html, body {
+    font-family: 'Source Sans Pro', sans-serif;
+    height: 100%;
+    background: #fdfdfd;
+}
+
+h1 {
+    font-size: 72px;
+}
+
+/* Hide the scrollbar without the content being "hidden" s*/
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+#top-menu {
+    background: #1a1a1a;
+    position: fixed;
+    z-index: 1000;
+    width: 100%
+}
+
+/* Pages wrapper */
+.wrapper {
+    min-height: 75%;
+    height: auto !important;
+    height: 75%;
+    width: 300%;
+}
+
+/* Single page container */
+.container {
+    padding-top: 1%;
+    min-height: 75%;
+    height: auto !important;
+    height: 75%;
+    margin: 0 auto -80px;
+    overflow: auto;
+    width: 33%;
+    float: left;
+}
+
+.container .title {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.text-code {
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+#photo {
+    height: 300px;
+}
+
+.no-style {
+    list-style: none;
+}
+
+.compress-list li {
+    line-height: 20px;
+}
+
+.push, footer {
+    height: 80px;
+    margin-top: 0;
+}
+
+footer {
+    position: fixed;
+    background: #ccc;
+    border: 0;
+    width: 100%;
+}
+
+footer * {
+    line-height: inherit;
+}
