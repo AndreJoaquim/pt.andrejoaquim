@@ -1,5 +1,7 @@
 $(document).ready(function () {
 	
+	var activeLink = "home";
+	
 	function on_mouseover(social_media){
 		$("#" + social_media +"-icon").on('mouseover', function() {
 			$(this).attr('src', 'images/'+ social_media + '_hover.png');
@@ -22,6 +24,11 @@ $(document).ready(function () {
     on_mouseout ("li");
 	
 	$("#home-link").click(function() {
+		
+		if(activeLink == "home")
+			return 0;
+		else
+			activeLink = "home";
         
         if( $(document).scrollLeft() != $("#home").offset().left ){
             $('html, body').animate({
@@ -38,6 +45,11 @@ $(document).ready(function () {
     });
 	
     $("#about-me-link").click(function() {
+		
+		if(activeLink == "about-me")
+			return 0;
+		else
+			activeLink = "about-me";
         
         if( $(document).scrollLeft() != $("#about-me").offset().left ){
             $('html, body').animate({
@@ -54,6 +66,11 @@ $(document).ready(function () {
     });
     
     $("#curriculum-link").click(function() {
+		
+		if(activeLink == "cv")
+			return 0;
+		else
+			activeLink = "cv";
         
         if( $(document).scrollLeft() != $("#curriculum").offset().left ){
             $('html, body').animate({
@@ -70,6 +87,11 @@ $(document).ready(function () {
     });
     
     $("#projects-link").click(function() {
+		
+		if(activeLink == "projects")
+			return 0;
+		else
+			activeLink = "projects";
         
         if( $(document).scrollLeft() != $("#projects").offset().left ){
             $('html, body').animate({
@@ -86,6 +108,11 @@ $(document).ready(function () {
     });
     
     $("#contacts-link").click(function() {
+		
+		if(activeLink == "contacts")
+			return 0;
+		else
+			activeLink = "contacts";
         
         if( $(document).scrollLeft() != $("#contacts").offset().left ){
             $('html, body').animate({
