@@ -14,25 +14,24 @@ $(document).ready(function () {
 	    });
 	}
 	
-    on_mouseover("fb");
-    on_mouseout ("fb");
+    on_mouseover("fb");		on_mouseout ("fb");
+	on_mouseover("gh");		on_mouseout ("gh");
+	on_mouseover("li");		on_mouseout ("li");
 	
-	on_mouseover("gh");
-    on_mouseout ("gh");
-	
-	on_mouseover("li");
-    on_mouseout ("li");
-	
-	$("#home-link").click(function() {
+	$("#home-link, #about-me-link, #curriculum-link, #projects-link, #contacts-link")
+	.click(function() {
+
+		var name = $(this).attr("name");
+		var page = name.split("-");
 		
-		if(activeLink == "home")
+		if(activeLink == name)
 			return 0;
 		else
-			activeLink = "home";
+			activeLink = name;
         
-        if( $(document).scrollLeft() != $("#home").offset().left ){
+        if( $(document).scrollLeft() != $("#" + page[0]).offset().left ){
             $('html, body').animate({
-                scrollLeft: $("#home").offset().left
+                scrollLeft: $("#" + page[0]).offset().left
             }, 1500);
         }
         
@@ -40,91 +39,7 @@ $(document).ready(function () {
             $(this).removeClass("active");
         });
         
-        $("#home-link").addClass("active");
-        
-    });
-	
-    $("#about-me-link").click(function() {
-		
-		if(activeLink == "about-me")
-			return 0;
-		else
-			activeLink = "about-me";
-        
-        if( $(document).scrollLeft() != $("#about-me").offset().left ){
-            $('html, body').animate({
-                scrollLeft: $("#about-me").offset().left
-            }, 1500);
-        }
-        
-        $("#menu-list li").each(function (){
-            $(this).removeClass("active");
-        });
-        
-        $("#about-me-link").addClass("active");
-        
-    });
-    
-    $("#curriculum-link").click(function() {
-		
-		if(activeLink == "cv")
-			return 0;
-		else
-			activeLink = "cv";
-        
-        if( $(document).scrollLeft() != $("#curriculum").offset().left ){
-            $('html, body').animate({
-                scrollLeft: $("#curriculum").offset().left
-            }, 1500);
-        }
-        
-        $("#menu-list li").each(function (){
-            $(this).removeClass("active");
-        });
-        
-        $("#curriculum-link").addClass("active");
-        
-    });
-    
-    $("#projects-link").click(function() {
-		
-		if(activeLink == "projects")
-			return 0;
-		else
-			activeLink = "projects";
-        
-        if( $(document).scrollLeft() != $("#projects").offset().left ){
-            $('html, body').animate({
-                scrollLeft: $("#projects").offset().left
-            }, 1500);
-        }
-        
-        $("#menu-list li").each(function (){
-            $(this).removeClass("active");
-        });
-        
-        $("#projects-link").addClass("active");
-        
-    });
-    
-    $("#contacts-link").click(function() {
-		
-		if(activeLink == "contacts")
-			return 0;
-		else
-			activeLink = "contacts";
-        
-        if( $(document).scrollLeft() != $("#contacts").offset().left ){
-            $('html, body').animate({
-                scrollLeft: $("#contacts").offset().left
-            }, 1500);
-        }
-        
-        $("#menu-list li").each(function (){
-            $(this).removeClass("active");
-        });
-        
-        $("#contacts-link").addClass("active");
+        $("#" + name).addClass("active");
         
     });
     
